@@ -4,7 +4,7 @@
 
 **Transform Your Hiring Process with Intelligent AI Interviews**
 
-[Visit VeriHire.live](https://verihire.live) • [Documentation](#getting-started) • [Features](#features) • [Demo](#demo)
+[Visit VeriHire.live](https://verihire.live) • [Documentation](#getting-started) • [Features](#features) • [Tech Stack](#-tech-stack)
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.5-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
