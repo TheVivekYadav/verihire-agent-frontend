@@ -20,20 +20,20 @@ export interface AppConfig {
 }
 
 export const APP_CONFIG_DEFAULTS: AppConfig = {
-  companyName: 'LiveKit',
-  pageTitle: 'LiveKit Voice Agent',
-  pageDescription: 'A voice agent built with LiveKit',
+  companyName: 'VeriHire',
+  pageTitle: 'VeriHire Voice AI',
+  pageDescription: 'Voice AI agent for conducting interviews',
 
   supportsChatInput: true,
   supportsVideoInput: true,
   supportsScreenShare: true,
   isPreConnectBufferEnabled: true,
 
-  logo: '/lk-logo.svg',
-  accent: '#002cf2',
-  logoDark: '/lk-logo-dark.svg',
-  accentDark: '#1fd5f9',
-  startButtonText: 'Start call',
+  logo: '/verihire-logo.svg',
+  accent: '#4F46E5',
+  logoDark: '/verihire-logo-dark.svg',
+  accentDark: '#818CF8',
+  startButtonText: 'Start Interview',
 
   // for LiveKit Cloud Sandbox
   sandboxId: undefined,

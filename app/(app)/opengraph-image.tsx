@@ -1,12 +1,12 @@
-import { headers } from 'next/headers';
-import { ImageResponse } from 'next/og';
+import { APP_CONFIG_DEFAULTS } from '@/app-config';
+import { getAppConfig } from '@/lib/utils';
 import getImageSize from 'buffer-image-size';
 import mime from 'mime';
+import { headers } from 'next/headers';
+import { ImageResponse } from 'next/og';
 import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { APP_CONFIG_DEFAULTS } from '@/app-config';
-import { getAppConfig } from '@/lib/utils';
 
 type Dimensions = {
   width: number;
@@ -92,7 +92,7 @@ function scaleImageSize(size: { width: number; height: number }, desiredHeight: 
 
 function cleanPageTitle(appName: string) {
   if (appName === APP_CONFIG_DEFAULTS.pageTitle) {
-    return 'Voice agent';
+    return 'Voice Agent';
   }
 
   return appName;
@@ -107,8 +107,7 @@ export default async function Image() {
 
   const pageTitle = cleanPageTitle(appConfig.pageTitle);
   const logoUri = appConfig.logoDark || appConfig.logo;
-  const isLogoUriLocal = logoUri.includes('lk-logo');
-  const wordmarkUri = logoUri === APP_CONFIG_DEFAULTS.logoDark ? 'public/lk-wordmark.svg' : logoUri;
+  const wordmarkUri = logoUri;
 
   // Load fonts - use file system in dev, fetch in production
   let commitMonoData: ArrayBuffer | undefined;
@@ -126,10 +125,8 @@ export default async function Image() {
   const { base64: bgSrcBase64 } = await getImageData('public/opengraph-image-bg.png');
 
   // wordmark
-  const { base64: wordmarkSrcBase64, dimensions: wordmarkDimensions } = isLogoUriLocal
-    ? await getImageData(wordmarkUri)
-    : await getImageData(logoUri);
-  const wordmarkSize = scaleImageSize(wordmarkDimensions, isLogoUriLocal ? 32 : 64);
+  const { base64: wordmarkSrcBase64, dimensions: wordmarkDimensions } = await getImageData(wordmarkUri);
+  const wordmarkSize = scaleImageSize(wordmarkDimensions, 32);
 
   // logo
   const { base64: logoSrcBase64, dimensions: logoDimensions } = await getImageData(

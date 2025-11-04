@@ -1,9 +1,6 @@
-# Agent Starter for React
+# VeriHire - AI-Powered Interview Platform
 
-This is a starter template for [LiveKit Agents](https://docs.livekit.io/agents) that provides a simple voice interface using the [LiveKit JavaScript SDK](https://github.com/livekit/client-sdk-js). It supports [voice](https://docs.livekit.io/agents/start/voice-ai), [transcriptions](https://docs.livekit.io/agents/build/text/), and [virtual avatars](https://docs.livekit.io/agents/integrations/avatar).
-
-Also available for:
-[Android](https://github.com/livekit-examples/agent-starter-android) • [Flutter](https://github.com/livekit-examples/agent-starter-flutter) • [Swift](https://github.com/livekit-examples/agent-starter-swift) • [React Native](https://github.com/livekit-examples/agent-starter-react-native)
+VeriHire is an advanced interview platform powered by AI voice agents, featuring integrated coding environments, collaborative whiteboards, and real-time voice interaction.
 
 <picture>
   <source srcset="./.github/assets/readme-hero-dark.webp" media="(prefers-color-scheme: dark)">
@@ -13,15 +10,16 @@ Also available for:
 
 ### Features:
 
-- Real-time voice interaction with LiveKit Agents
-- Camera video streaming support
-- Screen sharing capabilities
-- Audio visualization and level monitoring
-- Virtual avatar integration
-- Light/dark theme switching with system preference detection
-- Customizable branding, colors, and UI text via configuration
+- **AI Voice Interviewer**: Real-time voice interaction with intelligent AI interviewer
+- **Live Code Editor**: Built-in coding environment with syntax highlighting
+- **Interactive Whiteboard**: Digital drawing area for technical discussions
+- **Real-time Collaboration**: Share screen and collaborate seamlessly
+- **Multi-language Support**: Support for multiple programming languages
+- **Session Recording**: Record and review interview sessions
 
-This template is built with Next.js and is free for you to use or modify as you see fit.
+### Tech Stack
+
+Built with Next.js, TypeScript, and modern web technologies.
 
 ### Project structure
 

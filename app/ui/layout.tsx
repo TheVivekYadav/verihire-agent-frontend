@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { headers } from 'next/headers';
 import { SessionProvider } from '@/components/app/session-provider';
 import { getAppConfig } from '@/lib/utils';
+import { headers } from 'next/headers';
+import * as React from 'react';
 
 export default async function ComponentsLayout({ children }: { children: React.ReactNode }) {
   const hdrs = await headers();
@@ -12,24 +12,9 @@ export default async function ComponentsLayout({ children }: { children: React.R
       <div className="bg-muted/20 min-h-svh p-8">
         <div className="mx-auto max-w-3xl space-y-8">
           <header className="space-y-2">
-            <h1 className="text-5xl font-bold tracking-tight">LiveKit UI</h1>
+            <h1 className="text-5xl font-bold tracking-tight">Voice AI Components</h1>
             <p className="text-muted-foreground max-w-80 leading-tight text-pretty">
-              A set of UI components for building LiveKit-powered voice experiences.
-            </p>
-            <p className="text-muted-foreground max-w-prose text-balance">
-              Built with{' '}
-              <a href="https://shadcn.com" className="underline underline-offset-2">
-                Shadcn
-              </a>
-              ,{' '}
-              <a href="https://motion.dev" className="underline underline-offset-2">
-                Motion
-              </a>
-              , and{' '}
-              <a href="https://livekit.io" className="underline underline-offset-2">
-                LiveKit
-              </a>
-              .
+              A set of UI components for building voice-powered experiences.
             </p>
             <p className="text-foreground max-w-prose text-balance">Open Source.</p>
           </header>
