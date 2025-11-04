@@ -1,120 +1,323 @@
-# VeriHire - AI-Powered Interview Platform
+<div align="center">
 
-VeriHire is an advanced interview platform powered by AI voice agents, featuring integrated coding environments, collaborative whiteboards, and real-time voice interaction.
+# 🎯 VeriHire - AI-Powered Interview Platform
+
+**Transform Your Hiring Process with Intelligent AI Interviews**
+
+[Visit VeriHire.live](https://verihire.live) • [Documentation](#getting-started) • [Features](#features) • [Demo](#demo)
+
+[![Next.js](https://img.shields.io/badge/Next.js-15.5-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![LiveKit](https://img.shields.io/badge/LiveKit-Powered-00A3E0?style=flat-square)](https://livekit.io/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+
+</div>
+
+---
+
+## 📖 About VeriHire
+
+**VeriHire** is a next-generation AI-powered interview platform that revolutionizes technical hiring. Built on [verihire.live](https://verihire.live), our platform combines cutting-edge voice AI technology with collaborative tools to create an immersive, efficient interview experience.
 
 <picture>
   <source srcset="./.github/assets/readme-hero-dark.webp" media="(prefers-color-scheme: dark)">
   <source srcset="./.github/assets/readme-hero-light.webp" media="(prefers-color-scheme: light)">
-  <img src="./.github/assets/readme-hero-light.webp" alt="App screenshot">
+  <img src="./.github/assets/readme-hero-light.webp" alt="VeriHire Platform Screenshot">
 </picture>
 
-### Features:
+### Why VeriHire?
 
-- **AI Voice Interviewer**: Real-time voice interaction with intelligent AI interviewer
-- **Live Code Editor**: Built-in coding environment with syntax highlighting
-- **Interactive Whiteboard**: Digital drawing area for technical discussions
-- **Real-time Collaboration**: Share screen and collaborate seamlessly
-- **Multi-language Support**: Support for multiple programming languages
-- **Session Recording**: Record and review interview sessions
+- **🤖 Intelligent AI Interviewer**: Natural, conversational interviews powered by advanced voice AI
+- **⚡ Real-time Interaction**: Seamless voice communication with minimal latency
+- **💼 Professional**: Designed for enterprise-grade technical assessments
+- **🚀 Efficient**: Reduce hiring time while improving candidate experience
 
-### Tech Stack
+---
 
-Built with Next.js, TypeScript, and modern web technologies.
+## ✨ Features
 
-### Project structure
+### Core Capabilities
 
-```
-agent-starter-react/
-├── app/
-│   ├── (app)/
-│   ├── api/
-│   ├── components/
-│   ├── fonts/
-│   ├── globals.css
-│   └── layout.tsx
-├── components/
-│   ├── livekit/
-│   ├── ui/
-│   ├── app.tsx
-│   ├── session-view.tsx
-│   └── welcome.tsx
-├── hooks/
-├── lib/
-├── public/
-└── package.json
-```
+| Feature | Description |
+|---------|-------------|
+| **🎙️ AI Voice Interviewer** | Conduct natural, intelligent interviews with real-time voice interaction and adaptive questioning |
+| **💻 Live Code Editor** | Built-in IDE with syntax highlighting, multi-language support, and code execution capabilities |
+| **🎨 Interactive Whiteboard** | Digital canvas for system design discussions, architecture diagrams, and problem-solving |
+| **📺 Screen Sharing** | Share and collaborate on code, designs, or documentation in real-time |
+| **🎬 Session Recording** | Automatic recording and playback of interview sessions for review and evaluation |
+| **📊 Multi-language Support** | Support for JavaScript, Python, Java, C++, Go, and 20+ programming languages |
+| **🔒 Secure & Private** | Enterprise-grade security with encrypted communications and data protection |
+| **📱 Responsive Design** | Works seamlessly across desktop, tablet, and mobile devices |
 
-## Getting started
+---
 
-> [!TIP]
-> If you'd like to try this application without modification, you can deploy an instance in just a few clicks with [LiveKit Cloud Sandbox](https://cloud.livekit.io/projects/p_/sandbox/templates/agent-starter-react).
+## 🛠️ Tech Stack
 
-[![Open on LiveKit](https://img.shields.io/badge/Open%20on%20LiveKit%20Cloud-002CF2?style=for-the-badge&logo=external-link)](https://cloud.livekit.io/projects/p_/sandbox/templates/agent-starter-react)
+VeriHire is built with modern, industry-leading technologies:
 
-Run the following command to automatically clone this template.
+### Frontend
+- **[Next.js 15.5](https://nextjs.org/)** - React framework with App Router
+- **[React 19](https://react.dev/)** - UI library with latest features
+- **[TypeScript 5](https://www.typescriptlang.org/)** - Type-safe JavaScript
+- **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS framework
 
-```bash
-lk app create --template agent-starter-react
-```
+### Real-time Communication
+- **[LiveKit](https://livekit.io/)** - Real-time audio/video infrastructure
+- **[LiveKit Agents](https://docs.livekit.io/agents/)** - AI agent framework
 
-Then run the app with:
+### UI Components
+- **[Radix UI](https://www.radix-ui.com/)** - Accessible component primitives
+- **[Phosphor Icons](https://phosphoricons.com/)** - Beautiful icon set
+- **[Motion](https://motion.dev/)** - Smooth animations
 
-```bash
-pnpm install
-pnpm dev
-```
+### Developer Tools
+- **[pnpm](https://pnpm.io/)** - Fast, disk-efficient package manager
+- **[ESLint](https://eslint.org/)** - Code linting
+- **[Prettier](https://prettier.io/)** - Code formatting
 
-And open http://localhost:3000 in your browser.
+---
 
-You'll also need an agent to speak with. Try our starter agent for [Python](https://github.com/livekit-examples/agent-starter-python), [Node.js](https://github.com/livekit-examples/agent-starter-node), or [create your own from scratch](https://docs.livekit.io/agents/start/voice-ai/).
+## 🚀 Getting Started
 
-## Configuration
+### Prerequisites
 
-This starter is designed to be flexible so you can adapt it to your specific agent use case. You can easily configure it to work with different types of inputs and outputs:
+Before you begin, ensure you have the following installed:
 
-#### Example: App configuration (`app-config.ts`)
+- **Node.js** 18.x or higher
+- **pnpm** 9.x or higher (install with `npm install -g pnpm`)
+- **LiveKit Account** - [Sign up free](https://cloud.livekit.io/)
 
-```ts
+### Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/TheVivekYadav/verihire-agent-frontend.git
+   cd verihire-agent-frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+
+3. **Configure environment variables**
+   
+   Copy the example environment file:
+   ```bash
+   cp .env.example .env.local
+   ```
+   
+   Edit `.env.local` with your LiveKit credentials:
+   ```env
+   LIVEKIT_API_KEY=your_api_key_here
+   LIVEKIT_API_SECRET=your_api_secret_here
+   LIVEKIT_URL=wss://your-project.livekit.cloud
+   ```
+
+4. **Start the development server**
+   ```bash
+   pnpm dev
+   ```
+
+5. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Setting Up the AI Agent
+
+VeriHire requires an AI agent backend to function. You can:
+
+- **Use our starter agents**:
+  - [Python Agent](https://github.com/livekit-examples/agent-starter-python)
+  - [Node.js Agent](https://github.com/livekit-examples/agent-starter-node)
+- **Build your own**: Follow the [LiveKit Agents documentation](https://docs.livekit.io/agents/start/voice-ai/)
+
+---
+
+## ⚙️ Configuration
+
+### Application Configuration
+
+Customize VeriHire's appearance and behavior in [`app-config.ts`](./app-config.ts):
+
+```typescript
 export const APP_CONFIG_DEFAULTS: AppConfig = {
-  companyName: 'LiveKit',
-  pageTitle: 'LiveKit Voice Agent',
-  pageDescription: 'A voice agent built with LiveKit',
+  companyName: 'VeriHire',
+  pageTitle: 'VeriHire Voice AI',
+  pageDescription: 'Voice AI agent for conducting interviews',
 
+  // Feature flags
   supportsChatInput: true,
   supportsVideoInput: true,
   supportsScreenShare: true,
   isPreConnectBufferEnabled: true,
 
-  logo: '/lk-logo.svg',
-  accent: '#002cf2',
-  logoDark: '/lk-logo-dark.svg',
-  accentDark: '#1fd5f9',
-  startButtonText: 'Start call',
+  // Branding
+  logo: '/verihire-logo.svg',
+  logoDark: '/verihire-logo-dark.svg',
+  accent: '#4F46E5',        // Primary accent color
+  accentDark: '#818CF8',    // Dark mode accent color
+  startButtonText: 'Start Interview',
 
-  // for LiveKit Cloud Sandbox
+  // LiveKit Cloud Sandbox (optional)
   sandboxId: undefined,
   agentName: undefined,
 };
 ```
 
-You can update these values in [`app-config.ts`](./app-config.ts) to customize branding, features, and UI text for your deployment.
+### Environment Variables
 
-> [!NOTE]
-> The `sandboxId` and `agentName` are for the LiveKit Cloud Sandbox environment.
-> They are not used for local development.
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `LIVEKIT_API_KEY` | Your LiveKit API key | ✅ Yes |
+| `LIVEKIT_API_SECRET` | Your LiveKit API secret | ✅ Yes |
+| `LIVEKIT_URL` | Your LiveKit server URL | ✅ Yes |
+| `NEXT_PUBLIC_APP_CONFIG_ENDPOINT` | Custom config endpoint | ❌ No |
+| `SANDBOX_ID` | LiveKit Cloud Sandbox ID | ❌ No |
 
-#### Environment Variables
+---
 
-You'll also need to configure your LiveKit credentials in `.env.local` (copy `.env.example` if you don't have one):
+## 📁 Project Structure
 
-```env
-LIVEKIT_API_KEY=your_livekit_api_key
-LIVEKIT_API_SECRET=your_livekit_api_secret
-LIVEKIT_URL=https://your-livekit-server-url
+```
+verihire-agent-frontend/
+├── app/                          # Next.js App Router
+│   ├── (app)/                   # App routes
+│   ├── api/                     # API routes
+│   ├── ui/                      # UI components
+│   ├── layout.tsx               # Root layout
+│   └── favicon.ico              # Favicon
+├── components/                   # React components
+│   ├── livekit/                 # LiveKit-specific components
+│   ├── ui/                      # Reusable UI components
+│   ├── app.tsx                  # Main app component
+│   ├── session-view.tsx         # Interview session view
+│   └── welcome.tsx              # Welcome screen
+├── hooks/                        # Custom React hooks
+├── lib/                          # Utility functions
+├── public/                       # Static assets
+├── styles/                       # Global styles
+├── app-config.ts                # Application configuration
+├── next.config.ts               # Next.js configuration
+└── package.json                 # Dependencies
 ```
 
-These are required for the voice agent functionality to work with your LiveKit project.
+---
 
-## Contributing
+## 🧪 Development
 
-This template is open source and we welcome contributions! Please open a PR or issue through GitHub, and don't forget to join us in the [LiveKit Community Slack](https://livekit.io/join-slack)!
+### Available Scripts
+
+```bash
+# Start development server with Turbopack
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Start production server
+pnpm start
+
+# Run linter
+pnpm lint
+
+# Format code
+pnpm format
+
+# Check code formatting
+pnpm format:check
+```
+
+### Code Quality
+
+This project uses:
+- **ESLint** for code linting
+- **Prettier** for code formatting
+- **TypeScript** for type checking
+
+Run all checks before committing:
+```bash
+pnpm lint && pnpm format:check
+```
+
+---
+
+## 🌐 Deployment
+
+### Deploy to Vercel (Recommended)
+
+The easiest way to deploy VeriHire is using [Vercel](https://vercel.com):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/TheVivekYadav/verihire-agent-frontend)
+
+1. Click the button above
+2. Add your environment variables
+3. Deploy!
+
+### Deploy to Other Platforms
+
+VeriHire can be deployed to any platform that supports Next.js:
+
+- **[Netlify](https://www.netlify.com/)**
+- **[Railway](https://railway.app/)**
+- **[DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform)**
+- **[AWS Amplify](https://aws.amazon.com/amplify/)**
+
+Refer to the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for detailed instructions.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to VeriHire! Whether it's bug fixes, new features, or documentation improvements, your help makes this project better.
+
+### How to Contribute
+
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **Commit your changes**: `git commit -m 'Add amazing feature'`
+4. **Push to the branch**: `git push origin feature/amazing-feature`
+5. **Open a Pull Request**
+
+### Development Guidelines
+
+- Follow the existing code style
+- Write meaningful commit messages
+- Add tests for new features
+- Update documentation as needed
+- Ensure all tests pass before submitting PR
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🔗 Links & Resources
+
+- **Website**: [verihire.live](https://verihire.live)
+- **GitHub**: [TheVivekYadav/verihire-agent-frontend](https://github.com/TheVivekYadav/verihire-agent-frontend)
+- **LiveKit Docs**: [docs.livekit.io](https://docs.livekit.io/)
+- **LiveKit Community**: [livekit.io/join-slack](https://livekit.io/join-slack)
+
+---
+
+## 💬 Support & Contact
+
+Need help or have questions?
+
+- **Issues**: [GitHub Issues](https://github.com/TheVivekYadav/verihire-agent-frontend/issues)
+- **Email**: support@verihire.live
+- **Community**: Join the [LiveKit Community Slack](https://livekit.io/join-slack)
+
+---
+
+<div align="center">
+
+**Built with ❤️ by the VeriHire Team**
+
+[verihire.live](https://verihire.live) | [Documentation](#getting-started) | [GitHub](https://github.com/TheVivekYadav/verihire-agent-frontend)
+
+</div>
