@@ -1,12 +1,12 @@
-import { APP_CONFIG_DEFAULTS } from '@/app-config';
-import { getAppConfig } from '@/lib/utils';
-import getImageSize from 'buffer-image-size';
-import mime from 'mime';
 import { headers } from 'next/headers';
 import { ImageResponse } from 'next/og';
+import getImageSize from 'buffer-image-size';
+import mime from 'mime';
 import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { APP_CONFIG_DEFAULTS } from '@/app-config';
+import { getAppConfig } from '@/lib/utils';
 
 type Dimensions = {
   width: number;
@@ -125,7 +125,8 @@ export default async function Image() {
   const { base64: bgSrcBase64 } = await getImageData('public/opengraph-image-bg.png');
 
   // wordmark
-  const { base64: wordmarkSrcBase64, dimensions: wordmarkDimensions } = await getImageData(wordmarkUri);
+  const { base64: wordmarkSrcBase64, dimensions: wordmarkDimensions } =
+    await getImageData(wordmarkUri);
   const wordmarkSize = scaleImageSize(wordmarkDimensions, 32);
 
   // logo

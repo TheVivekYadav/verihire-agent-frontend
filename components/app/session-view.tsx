@@ -1,5 +1,7 @@
 'use client';
 
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'motion/react';
 import type { AppConfig } from '@/app-config';
 import { ChatTranscript } from '@/components/app/chat-transcript';
 import { PreConnectMessage } from '@/components/app/preconnect-message';
@@ -7,15 +9,13 @@ import { AIPanel } from '@/components/interview/ai-panel';
 import { CodeEditor } from '@/components/interview/code-editor';
 import { Whiteboard } from '@/components/interview/whiteboard';
 import {
-    AgentControlBar,
-    type ControlBarControls,
+  AgentControlBar,
+  type ControlBarControls,
 } from '@/components/livekit/agent-control-bar/agent-control-bar';
 import { useChatMessages } from '@/hooks/useChatMessages';
 import { useConnectionTimeout } from '@/hooks/useConnectionTimout';
 import { useDebugMode } from '@/hooks/useDebug';
 import { cn } from '@/lib/utils';
-import { motion } from 'motion/react';
-import React, { useEffect, useRef, useState } from 'react';
 import { ScrollArea } from '../livekit/scroll-area/scroll-area';
 
 const MotionBottom = motion.create('div');
@@ -94,7 +94,7 @@ export const SessionView = ({
   }, [messages]);
 
   return (
-    <section className="relative z-10 h-full w-full overflow-hidden bg-muted/20" {...props}>
+    <section className="bg-muted/20 relative z-10 h-full w-full overflow-hidden" {...props}>
       {/* Main Dashboard Grid */}
       <div className="grid h-full grid-cols-1 gap-4 p-4 md:grid-cols-3">
         {/* Left Column - Code/Whiteboard */}
@@ -126,9 +126,7 @@ export const SessionView = ({
           </div>
 
           {/* Content Area */}
-          <div className="flex-1">
-            {activeTab === 'code' ? <CodeEditor /> : <Whiteboard />}
-          </div>
+          <div className="flex-1">{activeTab === 'code' ? <CodeEditor /> : <Whiteboard />}</div>
         </div>
 
         {/* Right Column - AI Panel */}
@@ -137,8 +135,8 @@ export const SessionView = ({
 
           {/* Chat Transcript */}
           {chatOpen && (
-            <div className="flex-1 overflow-hidden rounded-lg border border-input bg-background">
-              <div className="border-b border-input px-4 py-2">
+            <div className="border-input bg-background flex-1 overflow-hidden rounded-lg border">
+              <div className="border-input border-b px-4 py-2">
                 <h3 className="font-mono text-sm font-semibold">Transcript</h3>
               </div>
               <ScrollArea ref={scrollAreaRef} className="h-[calc(100%-3rem)] p-4">
@@ -150,7 +148,7 @@ export const SessionView = ({
       </div>
 
       {/* Control Bar - Fixed Bottom */}
-      <div className="fixed inset-x-0 bottom-0 z-50 bg-gradient-to-t from-background via-background to-transparent p-4">
+      <div className="from-background via-background fixed inset-x-0 bottom-0 z-50 bg-gradient-to-t to-transparent p-4">
         <div className="mx-auto max-w-7xl">
           {appConfig.isPreConnectBufferEnabled && (
             <PreConnectMessage messages={messages} className="pb-4" />
