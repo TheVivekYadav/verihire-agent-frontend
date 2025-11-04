@@ -1,21 +1,21 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'motion/react';
 import type { AppConfig } from '@/app-config';
 import { ChatTranscript } from '@/components/app/chat-transcript';
 import { PreConnectMessage } from '@/components/app/preconnect-message';
+import { AIPanel } from '@/components/interview/ai-panel';
 import { CodeEditor } from '@/components/interview/code-editor';
 import { Whiteboard } from '@/components/interview/whiteboard';
-import { AIPanel } from '@/components/interview/ai-panel';
 import {
-  AgentControlBar,
-  type ControlBarControls,
+    AgentControlBar,
+    type ControlBarControls,
 } from '@/components/livekit/agent-control-bar/agent-control-bar';
 import { useChatMessages } from '@/hooks/useChatMessages';
 import { useConnectionTimeout } from '@/hooks/useConnectionTimout';
 import { useDebugMode } from '@/hooks/useDebug';
 import { cn } from '@/lib/utils';
+import { motion } from 'motion/react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ScrollArea } from '../livekit/scroll-area/scroll-area';
 
 const MotionBottom = motion.create('div');

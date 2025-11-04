@@ -1,7 +1,7 @@
 'use client';
 
-import { BarVisualizer, useVoiceAssistant } from '@livekit/components-react';
 import { cn } from '@/lib/utils';
+import { BarVisualizer, useVoiceAssistant } from '@livekit/components-react';
 
 export function AIPanel({ className }: { className?: string }) {
   const { state: agentState, audioTrack: agentAudioTrack } = useVoiceAssistant();
